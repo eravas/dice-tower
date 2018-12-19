@@ -32,7 +32,7 @@ function dTower(sides,number) {
           var roll = Math.floor(Math.random() * (sides)) + 1;
           output += "+" + roll + "";
           sum += roll;
-          if (i % 20 == 0) {
+          if (i % 10 == 0) {
                output += "\n";
           } 
      }
