@@ -3,7 +3,7 @@
           <script type="text/javascript" src="tower.js"></script>
      </head>
      <body>
-          <output name="rngQuote" id="rngQuote" form="input" value="Take a chance roll the dice"></output><br>
+          Take a chance roll the dice
           <form  name="input" id="input" action="">
                <label for="numberDice">Number of dice:</label>
                <input type="number" name="numberDice" id="numberDice" value="6" max="999" min="1"><br>
