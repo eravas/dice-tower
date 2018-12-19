@@ -1,6 +1,6 @@
 <html>
      <head>
-          <script type="text/javascript" src="scripts/tower.js"></script>
+          <script type="text/javascript" src="tower.js"></script>
      </head>
      <body>
           Take a chance roll the dice
