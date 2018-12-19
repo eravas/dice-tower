@@ -13,7 +13,7 @@
                <input type="checkbox" id="critBox" name="critBox" value="1"><br>
                <button type="button" onClick="varSet()">Roll the dice!</button><br><br>
                <label for="total">Sum: </label>
-               <output name="total" id="total"></output>
+               <output name="total" id="total"></output><br>
                <label for="result">Result: </label>
                <output name="result" id="result"></output>
           </form>
