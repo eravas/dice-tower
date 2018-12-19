@@ -4,8 +4,8 @@ var n = 6;
 function varSet() {
      s = document.getElementById("sides").value;
      n = document.getElementById("numberDice").value;
-     var rng = Math.floor(Math.random() * 3) + 1;
-     switch (rng) {
+     //var rng = Math.floor(Math.random() * 3) + 1;
+     /*switch (rng) {
           default:
                document.getElementById("rngQuote").value="Take a chance roll the dice";
                break;
@@ -17,7 +17,7 @@ function varSet() {
                break;
           case 3:
                document.getElementById("rngQuote").value="You succesfully dodge the air next to the enemy's fist...unfortunately the fist hurts more";
-               break;
+               break;*/
      if (n > 999 || n < 1) { 
           alert("By decree of Bahamut the wise, in all his wisdom, rolling more than 999 or less than 1 dice is forbidden at this time."); 
      } else { 
