@@ -40,7 +40,7 @@ function dTower(sides,number) {
           var critDmg = sum*2;
           var maxQ = document.getElementById("numberDice").value * document.getElementById("sides").value
           if(sum == maxQ) {
-               document.getElementById("total").value="2 x (" + sum + ") = " + critDmg + "Now that's a lot of damage!"
+               document.getElementById("total").value="2 x (" + sum + ") = " + critDmg + " Now that's a lot of damage!"
                document.getElementById("result").value=output
           } else {
                document.getElementById("total").value="2 x (" + sum + ") = " + critDmg
