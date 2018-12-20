@@ -1,7 +1,6 @@
 <html>
      <head>
           <script type="text/javascript" src="tower.js"></script>
-          <script type="text/javascript" src="quotes.js"></script>
      </head>
      <body>
           <form  name="input" id="input" action="">
