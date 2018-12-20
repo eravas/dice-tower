@@ -3,7 +3,7 @@ function getQuote() {
   var rng = Math.floor(Math.random() * 8) + 1;
   switch (rng) {
     case 1:
-      document.getElementById("rngQuote").value="You visciously tap the enemy";
+      document.getElementById("rngQuote").value="You viciously tap the enemy. They are mildly annoyed";
       break;
     case 2:
       document.getElementById("rngQuote").value="You land a powerful strike with deadly precision...on the enemy's shield";
