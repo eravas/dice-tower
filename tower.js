@@ -36,11 +36,8 @@ function dTower(sides,number) {
           document.getElementById("total").value=sum
           document.getElementById("result").value=output
      }
-}
-function getQuote() {
-  var rng;
-  if (sum / document.getElementById("numberDice").value == 1) 
-     {
+     var rng;
+  if (sum / document.getElementById("numberDice").value == 1) {
           rng = 0; 
      } else {
           rng = Math.floor(Math.random() * 8) + 1;
