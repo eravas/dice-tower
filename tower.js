@@ -56,10 +56,10 @@ function dTower(sides,number) {
       document.getElementById("rngQuote").value="You succesfully dodge the air next to the enemy's fist...unfortunately the fist hurts more";
       break;
     case 4:
-      document.getElementById("rngQuote").value="you display a show of strength. It wasn't much";
+      document.getElementById("rngQuote").value="You display a show of strength. It wasn't much";
       break;
     case 5:
-      document.getElementById("rngQuote").value="you stab the enemy....while holding the blade backwards.";
+      document.getElementById("rngQuote").value="You stab the enemy....while holding the blade backwards.";
       break;
     case 6:
       document.getElementById("rngQuote").value="You swing at the enemy. They get a nice taste of the handle";
