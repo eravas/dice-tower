@@ -12,7 +12,7 @@
                <input type="number" name="sides" id="sides" value="8" max="999" min="1"><br>
                <label for="critBox">Critical? (x2)</label>
                <input type="checkbox" id="critBox" name="critBox" value="1"><br>
-               <button type="button" onClick="varSet()">Roll the dice!</button><br><br>
+               <button type="button" onClick="varSet();getQuote();">Roll the dice!</button><br><br>
                <label for="total">Sum: </label>
                <output name="total" id="total"></output><br>
                <label for="result">Result: </label>
