@@ -5,7 +5,7 @@
      </head>
      <body>
           <form  name="input" id="input" action="">
-               <output name="rngQuote" id="rngQuote"></output>
+               <output name="rngQuote" id="rngQuote"></output><br>
                <label for="numberDice">Number of dice:</label>
                <input type="number" name="numberDice" id="numberDice" value="6" max="999" min="1"><br>
                <label for="sides">Number of sides:</label>
