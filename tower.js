@@ -1,6 +1,25 @@
 //all of the js code
+
+//two variables used to store the value of input parameters
 var s = 8;
 var n = 6;
+
+//a seperate function used for rolling stats in D&D fifth edition via the "4d6 drop lowest" method
+function statRoll() {
+     var choices = "";
+     for (i = 1; i <= 6; i++) {
+          var rOne = Math.floor(Math.random() * (6)) + 1;
+          var rTwo = Math.floor(Math.random() * (6)) + 1;
+          var rThree = Math.floor(Math.random() * (6)) + 1;
+          var rFour = Math.floor(Math.random() * (6)) + 1;
+          var dropped = Math.min(rOne, rTwo, rThree, rFour);
+          var stat = rOne + rTwo + rThree + rFour - dropped;
+          var choices += stat + ", ";
+     }
+     document.getElementById("result").value=choices;
+}
+//this function takes the input from the user and sets the two variables "s" and "n" equal to those. It then calls the dTower function to take that input and roll some dice with it
+//also checks to see if more than 9999 dice are being rolled, in which case ouputs an error message instead
 function varSet() {
      s = document.getElementById("sides").value;
      n = document.getElementById("numberDice").value;
@@ -10,6 +29,8 @@ function varSet() {
           dTower(s,n); 
      }   
 }
+//this is the function to roll dice. takes the number of dice the user wants to roll, the number of sides on those dice, and rolls them.
+//also displays a random message every time it is called and checks for special cases (maximum value rolled, all 1s rolled etc.) which trigger special messages
 function dTower(sides,number) {
      var output = "";
      var sum = 0;
