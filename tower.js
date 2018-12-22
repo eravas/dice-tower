@@ -7,6 +7,7 @@ var n = 6;
 //a seperate function used for rolling stats in D&D fifth edition via the "4d6 drop lowest" method
 function statRoll() {
      var choices = "";
+     var statSum = 0;
      for (i = 1; i <= 6; i++) {
           var rOne = Math.floor(Math.random() * (6)) + 1;
           var rTwo = Math.floor(Math.random() * (6)) + 1;
@@ -15,8 +16,10 @@ function statRoll() {
           var dropped = Math.min(rOne, rTwo, rThree, rFour);
           var stat = rOne + rTwo + rThree + rFour - dropped;
           choices += stat + ", ";
+          statSum += stat;
      }
      document.getElementById("result").value=choices;
+     document.getElementById("total").value=statSum;
 }
 //this function takes the input from the user and sets the two variables "s" and "n" equal to those. It then calls the dTower function to take that input and roll some dice with it
 //also checks to see if more than 9999 dice are being rolled, in which case ouputs an error message instead
