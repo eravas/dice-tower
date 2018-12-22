@@ -14,7 +14,7 @@ function statRoll() {
           var rFour = Math.floor(Math.random() * (6)) + 1;
           var dropped = Math.min(rOne, rTwo, rThree, rFour);
           var stat = rOne + rTwo + rThree + rFour - dropped;
-          var choices += stat + ", ";
+          choices += stat + ", ";
      }
      document.getElementById("result").value=choices;
 }
