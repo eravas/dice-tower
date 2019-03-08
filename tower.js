@@ -4,19 +4,49 @@
 var s = 8;
 var n = 6;
 
-//a seperate function used for rolling stats in D&D fifth edition via the "4d6 drop lowest" method
+//a seperate function used for rolling stats in D&D fifth edition via a method selected by the user via a drop-down selection
 function statRoll() {
+     var method = document.getElementById("rollType").value;
      var choices = "";
      var statSum = 0;
-     for (i = 1; i <= 6; i++) {
-          var rOne = Math.floor(Math.random() * (6)) + 1;
-          var rTwo = Math.floor(Math.random() * (6)) + 1;
-          var rThree = Math.floor(Math.random() * (6)) + 1;
-          var rFour = Math.floor(Math.random() * (6)) + 1;
-          var dropped = Math.min(rOne, rTwo, rThree, rFour);
-          var stat = rOne + rTwo + rThree + rFour - dropped;
-          choices += stat + ", ";
-          statSum += stat;
+     if (method == "fourDSixDrop") {
+          for (i = 1; i <= 6; i++) {
+               var rOne = Math.floor(Math.random() * (6)) + 1;
+               var rTwo = Math.floor(Math.random() * (6)) + 1;
+               var rThree = Math.floor(Math.random() * (6)) + 1;
+               var rFour = Math.floor(Math.random() * (6)) + 1;
+               var dropped = Math.min(rOne, rTwo, rThree, rFour);
+               var stat = rOne + rTwo + rThree + rFour - dropped;
+               choices += stat + ", ";
+               statSum += stat;
+          }
+     } else if (method == "threeDSix") {
+          for (i = 1; i <= 6; i++) {
+               var rOne = Math.floor(Math.random() * (6)) + 1;
+               var rTwo = Math.floor(Math.random() * (6)) + 1;
+               var rThree = Math.floor(Math.random() * (6)) + 1;
+               var stat = rOne + rTwo + rThree;
+               choices += stat + ", ";
+               statSum += stat;
+          }
+     } else if (method == "threeDSixDropPT") {
+          for (i = 1; i <= 6; i++) {
+               var rOne = Math.floor(Math.random() * (6)) + 1;
+               var rTwo = Math.floor(Math.random() * (6)) + 1;
+               var rThree = Math.floor(Math.random() * (6)) + 1;
+               var dropped = Math.min(rOne, rTwo, rThree);
+               var stat = rOne + rTwo + rThree + 3 - dropped;
+               choices += stat + ", ";
+               statSum += stat;
+          }
+     } else if (method == "insanity") {
+          for (i = 1; i <= 6; i++) {
+               var stat = Math.floor(Math.random() * (20)) + 1;
+               choices += stat + ", ";
+               statSum += stat;
+          }
+     } else {
+          alert("Whoops, Looks like a spell went wonky. Please try again later");
      }
      document.getElementById("result").value=choices;
      document.getElementById("total").value=statSum;
