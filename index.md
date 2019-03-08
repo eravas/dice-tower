@@ -12,7 +12,14 @@
                <label for="critBox">Critical? (x2)</label>
                <input type="checkbox" id="critBox" name="critBox" value="1"><br>
                <button type="button" onClick="varSet()">Roll the dice!</button><br>
-               <button type="button" onClick="statRoll()">Roll Stats</button>(4d6 drop lowest)<br>
+               <button type="button" onClick="statRoll()">Roll Stats</button>
+               <select name="rollType" id="rollType">
+                    <option value="fourDSixDrop">4d6 Drop Lowest</option>
+                    <option value="threeDSix">3d6</option>
+                    <option value="threeDSixDropPT">3d6 Drop Lowest + 3</option>
+                    <option value="insanity">1d20 (use at your own risk)</option>
+               </select>
+               <br>
                <label for="total">Sum: </label>
                <output name="total" id="total"></output><br>
                <label for="result">Result: </label>
