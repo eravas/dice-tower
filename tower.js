@@ -67,14 +67,14 @@ function varSet() {
 function dTower(sides,number) {
      var output = "";
      var sum = 0;
-     var wMods = 0;
      var critCheck = document.getElementById("critBox").checked;
      var modifiers = document.getElementById("mods").value;
+     var wMods = modifiers;
      for (i = 1; i <= number; i++) {
           var roll = Math.floor(Math.random() * (sides)) + 1;
           output += roll + ", ";
           sum += roll;
-          wMods = sum + modifiers;
+          wMods += roll;
           if (i % 15 == 0) {
                output += "\n";
           } 
