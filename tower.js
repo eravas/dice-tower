@@ -3,7 +3,7 @@
 //two variables used to store the value of input parameters
 var s = 8;
 var n = 6;
-
+var m = 0;
 //a seperate function used for rolling stats in D&D fifth edition via a method selected by the user via a drop-down selection
 function statRoll() {
      var method = document.getElementById("rollType").value;
@@ -57,8 +57,9 @@ function statRoll() {
 function varSet() {
      s = document.getElementById("sides").value;
      n = document.getElementById("numberDice").value;
-     if (n > 9999 || n < 1) { 
-          alert("By decree of Bahamut the wise, in all his wisdom, rolling more than 9999 or less than 1 dice is forbidden at this time."); 
+     m = document.getElementById("mods").value;
+     if (n > 9999 || n < 1 || m > 999 || m < -999 || s < 2) { 
+          alert("By decree of Bahamut the wise, in all his wisdom, rolling more than 9999 of less than 1 dice or with a modifier greater than 999 or less than -999 is forbidden at this time."); 
      } else { 
           dTower(s,n); 
      }   
