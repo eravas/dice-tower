@@ -26,7 +26,7 @@
                     <option value="insanity">1d20 (use at your own risk)</option>
                </select>
                <br>
-               <output name="rngQuote" id="rngQuote"></output>
+               <output name="rngQuote" id="rngQuote" value="I am a creature of the night"></output>
                <br>
                <label for="total">Sum: </label>
                <output name="total" id="total"></output>
