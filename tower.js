@@ -100,7 +100,7 @@ function dTower(sides,number) {
   if (sum / document.getElementById("numberDice").value == 1) {
           rng = 0; 
      } else {
-          rng = Math.floor(Math.random() * 24) + 1;
+          rng = Math.floor(Math.random() * 26) + 1;
      }
   switch (rng) {
     case 0:
@@ -177,6 +177,12 @@ function dTower(sides,number) {
       break;
     case 24:
       document.getElementById("rngQuote").value="If you get too worried about what could go wrong, you might miss a chance to do something great.";
+      break;
+    case 25:
+      document.getElementById("rngQuote").value="\"Stay back, I don't know how to use this thing!\"";
+      break;
+    case 26:
+      document.getElementById("rngQuote").value="vommit is not an approved lubricant for engine systems";
       break;
     default:
       document.getElementById("rngQuote").value="Subscribe to Pewdiepie";
