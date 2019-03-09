@@ -2,7 +2,7 @@
      <head>
           <script type="text/javascript" src="tower.js"></script>
      </head>
-     <body>
+     <body  onload="initQuote()">
           <form  name="input" id="input" action="">
                <br>
                <label for="numberDice">Number of dice:</label>
@@ -26,7 +26,7 @@
                     <option value="insanity">1d20 (use at your own risk)</option>
                </select>
                <br>
-               <output name="rngQuote" id="rngQuote" onload="initQuote()"></output>
+               <output name="rngQuote" id="rngQuote"></output>
                <br>
                <label for="total">Sum: </label>
                <output name="total" id="total"></output>
