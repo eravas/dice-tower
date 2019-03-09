@@ -16,9 +16,9 @@
                <input type="checkbox" id="critBox" name="critBox" value="1">
                <br>
                <button type="button" onClick="varSet()">Roll the dice!</button>
+               <label for="mods">Modifiers: </label>
                <input type="number" name="mods" id="mods" value="0" max="999" min="-999">
                <br>
-               <label for="mods">Modifiers: </label>
                <button type="button" onClick="statRoll()">Roll Stats</button>
                <select name="rollType" id="rollType">
                     <option value="fourDSixDrop">4d6 Drop Lowest</option>
