@@ -67,11 +67,14 @@ function varSet() {
 function dTower(sides,number) {
      var output = "";
      var sum = 0;
+     var wMods = 0;
      var critCheck = document.getElementById("critBox").checked;
+     var modifiers = document.getElementById("mods").value;
      for (i = 1; i <= number; i++) {
           var roll = Math.floor(Math.random() * (sides)) + 1;
           output += roll + ", ";
           sum += roll;
+          wMods = sum + modifiers;
           if (i % 15 == 0) {
                output += "\n";
           } 
@@ -83,11 +86,11 @@ function dTower(sides,number) {
                document.getElementById("total").value="2 x (" + sum + ") = " + critDmg + " Now that's a lot of damage!"
                document.getElementById("result").value=output
           } else {
-               document.getElementById("total").value="2 x (" + sum + ") = " + critDmg
+               document.getElementById("total").value="2 x (" + sum + ") = " + critDmg + " + " + modifiers + " = " + wMods
                document.getElementById("result").value=output
           }
      } else {
-          document.getElementById("total").value=sum
+          document.getElementById("total").value=sum + " + " + modifiers + " = " + wMods
           document.getElementById("result").value=output
      }
      var rng;
