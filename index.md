@@ -9,7 +9,7 @@
                <input type="number" name="numberDice" id="numberDice" value="6" max="9999" min="1" size="4">
                <br>
                <label for="sides">Number of sides:</label>
-               <input type="number" name="sides" id="sides" value="8" min="1" size="4">
+               <input type="number" name="sides" id="sides" value="8" min="2" size="4">
                <br>
                <label for="critBox">Critical: </label>
                <input type="checkbox" id="critBox" name="critBox" value="1">
