@@ -191,4 +191,4 @@ function dTower(sides,number) {
 }
 
 //this sets the initial value of the random message
-document.getElementById("rngQuote").value = "Take a chance, roll the dice";
+document.getElementById("rngQuote").value="Take a chance, roll the dice";
