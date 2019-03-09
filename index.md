@@ -12,7 +12,7 @@
                <label for="sides">Number of sides:</label>
                <input type="number" name="sides" id="sides" value="8" max="999" min="1">
                <br>
-               <label for="critBox">Critical? (x2)</label>
+               <label for="critBox">Critical: </label>
                <input type="checkbox" id="critBox" name="critBox" value="1">
                <br>
                <button type="button" onClick="varSet()">Roll the dice!</button>
