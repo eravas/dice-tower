@@ -70,26 +70,29 @@ function dTower(sides,number) {
      var critCheck = document.getElementById("critBox").checked;
      var wMods = parseInt(document.getElementById("mods").value, 10);
      var modifiers = document.getElementById("mods").value;
-     for (i = 1; i <= number; i++) {
-          var roll = Math.floor(Math.random() * (sides)) + 1;
-          output += roll + ", ";
-          sum += roll;
-          wMods += roll;
-          if (i % 15 == 0) {
-               output += "\n";
-          } 
-     }
      if (critCheck == 1) {
-          var critDmg = sum*2;
-          var maxQ = document.getElementById("numberDice").value * document.getElementById("sides").value
-          if(sum == maxQ) {
-               document.getElementById("total").value="2 x (" + sum + ") = " + critDmg + " Now that's a lot of damage!"
-               document.getElementById("result").value=output
-          } else {
-               document.getElementById("total").value="2 x (" + sum + ") = " + critDmg + " + " + modifiers + " = " + wMods
-               document.getElementById("result").value=output
+          var nRolls = 2 * number;
+          for (i = 1; i <= nRolls; i++) {
+               var roll = Math.floor(Math.random() * (sides)) + 1;
+               output += roll + ", ";
+               sum += roll;
+               wMods += roll;
+               if (i % 15 == 0) {
+                    output += "\n";
+               } 
           }
+          document.getElementById("total").value=sum + " + " + modifiers + " = " + wMods
+          document.getElementById("result").value=output
      } else {
+          for (i = 1; i <= number; i++) {
+               var roll = Math.floor(Math.random() * (sides)) + 1;
+               output += roll + ", ";
+               sum += roll;
+               wMods += roll;
+               if (i % 15 == 0) {
+                    output += "\n";
+               } 
+          }
           document.getElementById("total").value=sum + " + " + modifiers + " = " + wMods
           document.getElementById("result").value=output
      }
@@ -123,6 +126,9 @@ function dTower(sides,number) {
       break;
     case 7:
       document.getElementById("rngQuote").value="You throw your spear... backwards";
+      break;
+    case 8:
+      document.getElementById("rngQuote").value="Now that's a lot of damage!";
       break;
     default:
       document.getElementById("rngQuote").value="Take a chance roll the dice";
