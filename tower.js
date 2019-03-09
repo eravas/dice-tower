@@ -1,5 +1,8 @@
 //all of the js code
 
+//this sets the initial value of the random message
+document.getElementById("rngQuote").value = "I am a creature of the night";
+
 //two variables used to store the value of input parameters
 var s = 8;
 var n = 6;
