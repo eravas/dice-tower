@@ -1,7 +1,7 @@
 //all of the js code
 
 //this sets the initial value of the random message
-document.getElementById("rngQuote").value = "I am a creature of the night";
+document.getElementById("rngQuote").value = "Take a chance, roll the dice";
 
 //two variables used to store the value of input parameters
 var s = 8;
@@ -143,7 +143,7 @@ function dTower(sides,number) {
       document.getElementById("rngQuote").value="It's over, he has the high ground";
       break;
     case 12:
-      document.getElementById("rngQuote").value="Take a chance roll the dice";
+      document.getElementById("rngQuote").value="I am a creature of the night";
       break;
     case 13:
       document.getElementById("rngQuote").value="There are too many of them, what are we going to do?";
