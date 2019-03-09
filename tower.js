@@ -68,8 +68,7 @@ function dTower(sides,number) {
      var output = "";
      var sum = 0;
      var critCheck = document.getElementById("critBox").checked;
-     var modifiers = document.getElementById("mods").value;
-     var wMods = modifiers;
+     var wMods = parseInt(document.getElementById("mods").value, 10);
      for (i = 1; i <= number; i++) {
           var roll = Math.floor(Math.random() * (sides)) + 1;
           output += roll + ", ";
