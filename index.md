@@ -17,7 +17,7 @@
                <br>
                <button type="button" onClick="varSet()">Roll the dice!</button>
                <label for="mods">+ ( </label>
-               <input type="number" name="mods" id="mods" value="0" max="999" min="-999">)
+               <input type="number" name="mods" id="mods" value="0" max="999" min="-999"> )
                <br>
                <button type="button" onClick="statRoll()">Roll Stats</button>
                <select name="rollType" id="rollType">
