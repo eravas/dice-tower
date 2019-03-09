@@ -100,7 +100,7 @@ function dTower(sides,number) {
   if (sum / document.getElementById("numberDice").value == 1) {
           rng = 0; 
      } else {
-          rng = Math.floor(Math.random() * 8) + 1;
+          rng = Math.floor(Math.random() * 24) + 1;
      }
   switch (rng) {
     case 0:
@@ -130,8 +130,56 @@ function dTower(sides,number) {
     case 8:
       document.getElementById("rngQuote").value="Now that's a lot of damage!";
       break;
-    default:
+    case 9:
+      document.getElementById("rngQuote").value="This is where the fun begins";
+      break;
+    case 10:
+      document.getElementById("rngQuote").value="You should try spinning, I hear it's a good trick";
+      break;
+    case 11:
+      document.getElementById("rngQuote").value="It's over, he has the high ground";
+      break;
+    case 12:
       document.getElementById("rngQuote").value="Take a chance roll the dice";
+      break;
+    case 13:
+      document.getElementById("rngQuote").value="There are too many of them, what are we going to do?";
+      break;
+    case 14:
+      document.getElementById("rngQuote").value="Hello there!";
+      break;
+    case 15:
+      document.getElementById("rngQuote").value="You are a bold one";
+      break;
+    case 16:
+      document.getElementById("rngQuote").value="You should have gone for the head";
+      break;
+    case 17:
+      document.getElementById("rngQuote").value="Take a chance roll the dice";
+      break;
+    case 18:
+      document.getElementById("rngQuote").value="Form Blazing Sword!";
+      break;
+    case 19:
+      document.getElementById("rngQuote").value="By the power of Greyskull!";
+      break;
+    case 20:
+      document.getElementById("rngQuote").value="I have the power!";
+      break;
+    case 21:
+      document.getElementById("rngQuote").value="Patience yields focus";
+      break;
+    case 22:
+      document.getElementById("rngQuote").value="VREPIT SA";
+      break;
+    case 23:
+      document.getElementById("rngQuote").value="Later pala-dudes";
+      break;
+    case 24:
+      document.getElementById("rngQuote").value="If you get too worried about what could go wrong, you might miss a chance to do something great.";
+      break;
+    default:
+      document.getElementById("rngQuote").value="Subscribe to Pewdiepie";
       break;
   }
 }
