@@ -6,17 +6,17 @@
           <form  name="input" id="input" action="">
                <br>
                <label for="numberDice">Number of dice:</label>
-               <input type="number" name="numberDice" id="numberDice" value="6" max="999" min="1">
+               <input type="number" name="numberDice" id="numberDice" value="6" max="999" min="1" size="5">
                <br>
                <label for="sides">Number of sides:</label>
-               <input type="number" name="sides" id="sides" value="8" max="999" min="1">
+               <input type="number" name="sides" id="sides" value="8" max="999" min="1" size="5">
                <br>
                <label for="critBox">Critical: </label>
                <input type="checkbox" id="critBox" name="critBox" value="1">
                <br>
                <button type="button" onClick="varSet()">Roll the dice!</button>
                <label for="mods">+ ( </label>
-               <input type="number" name="mods" id="mods" value="0" max="999" min="-999"> )
+               <input type="number" name="mods" id="mods" value="0" max="999" min="-999" size="5"> )
                <br>
                <button type="button" onClick="statRoll()">Roll Stats</button>
                <select name="rollType" id="rollType">
