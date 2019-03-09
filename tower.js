@@ -50,6 +50,7 @@ function statRoll() {
      }
      document.getElementById("result").value=choices;
      document.getElementById("total").value=statSum;
+     document.getElementById("rngQuote").value="Maybe you should just be a farmer...";
 }
 //this function takes the input from the user and sets the two variables "s" and "n" equal to those. It then calls the dTower function to take that input and roll some dice with it
 //also checks to see if more than 9999 dice are being rolled, in which case ouputs an error message instead
@@ -113,7 +114,7 @@ function dTower(sides,number) {
       document.getElementById("rngQuote").value="You land a powerful strike with deadly precision...on the enemy's shield";
       break;
     case 3:
-      document.getElementById("rngQuote").value="Maybe you should just be a farmer...";
+      document.getElementById("rngQuote").value="Word of advice: If possible, vaccinate your children";
       break;
     case 4:
       document.getElementById("rngQuote").value="You display a show of strength. It wasn't much";
@@ -182,7 +183,7 @@ function dTower(sides,number) {
       document.getElementById("rngQuote").value="\"Stay back, I don't know how to use this thing!\"";
       break;
     case 26:
-      document.getElementById("rngQuote").value="vommit is not an approved lubricant for engine systems";
+      document.getElementById("rngQuote").value="Vommit is not an approved lubricant for engine systems";
       break;
     default:
       document.getElementById("rngQuote").value="Subscribe to Pewdiepie";
