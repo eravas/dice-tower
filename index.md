@@ -4,7 +4,6 @@
      </head>
      <body>
           <form  name="input" id="input" action="">
-               <output name="rngQuote" id="rngQuote"></output>
                <br>
                <label for="numberDice">Number of dice:</label>
                <input type="number" name="numberDice" id="numberDice" value="6" max="999" min="1">
@@ -26,6 +25,8 @@
                     <option value="threeDSixDropPT">3d6 Drop Lowest + 3</option>
                     <option value="insanity">1d20 (use at your own risk)</option>
                </select>
+               <br>
+               <output name="rngQuote" id="rngQuote"></output>
                <br>
                <label for="total">Sum: </label>
                <output name="total" id="total"></output>
