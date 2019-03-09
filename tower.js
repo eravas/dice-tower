@@ -113,7 +113,7 @@ function dTower(sides,number) {
       document.getElementById("rngQuote").value="You land a powerful strike with deadly precision...on the enemy's shield";
       break;
     case 3:
-      document.getElementById("rngQuote").value="You succesfully dodge the air next to the enemy's fist...unfortunately the fist hurts more";
+      document.getElementById("rngQuote").value="Maybe you should just be a farmer...";
       break;
     case 4:
       document.getElementById("rngQuote").value="You display a show of strength. It wasn't much";
