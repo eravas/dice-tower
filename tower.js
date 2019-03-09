@@ -155,7 +155,7 @@ function dTower(sides,number) {
       document.getElementById("rngQuote").value="You should have gone for the head";
       break;
     case 17:
-      document.getElementById("rngQuote").value="Take a chance roll the dice";
+      document.getElementById("rngQuote").value="To truly live, one must do more than simply not die";
       break;
     case 18:
       document.getElementById("rngQuote").value="Form Blazing Sword!";
