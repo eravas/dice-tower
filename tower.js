@@ -50,7 +50,9 @@ function statRoll() {
      }
      document.getElementById("result").value=choices;
      document.getElementById("total").value=statSum;
-     document.getElementById("rngQuote").value="Maybe you should just be a farmer...";
+     if (statSum =< 65) {document.getElementById("rngQuote").value="Maybe you should just be a farmer...";}
+     if (statSum => 80) {document.getElementById("rngQuote").value="With great power comes great responsibility.";}
+     if (statSum > 65 || statSum < 80) {document.getElementById("rngQuote").value="It's a dangerous business, going out your door. If you don't keep your feet, there's no telling where you might be swept off to.";}
 }
 //this function takes the input from the user and sets the two variables "s" and "n" equal to those. It then calls the dTower function to take that input and roll some dice with it
 //also checks to see if more than 9999 dice are being rolled, in which case ouputs an error message instead
