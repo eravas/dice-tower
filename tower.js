@@ -1,8 +1,8 @@
 //all of the js code
 
 //two variables used to store the value of input parameters
-var s = 8;
-var n = 6;
+var s = 20;
+var n = 1;
 var m = 0;
 //a seperate function used for rolling stats in D&D fifth edition via a method selected by the user via a drop-down selection
 function statRoll() {
