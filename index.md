@@ -27,8 +27,8 @@
                     <option value="insanity">1d20 (use at your own risk)</option>
                </select>
                <br>
-               <br>
                <output name="rngQuote" id="rngQuote"></output>
+               <br>
                <br>
                <label for="total">Sum: </label>
                <output name="total" id="total"></output>
