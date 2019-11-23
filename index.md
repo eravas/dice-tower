@@ -11,6 +11,7 @@
                <label for="sides">Number of sides:</label>
                <input type="number" size="5" name="sides" id="sides" value="8" min="2">
                <br>
+               <br>
                <label for="critBox">Critical: </label>
                <input type="checkbox" id="critBox" name="critBox" value="1">
                <br>
@@ -25,6 +26,7 @@
                     <option value="threeDSixDropPT">3d6 Drop Lowest + 3</option>
                     <option value="insanity">1d20 (use at your own risk)</option>
                </select>
+               <br>
                <br>
                <output name="rngQuote" id="rngQuote"></output>
                <br>
