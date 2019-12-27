@@ -4,6 +4,10 @@
 var s = 20;
 var n = 1;
 var m = 0;
+
+//presets handled here. for now only basic weapon attacks (longsword, shortsword, rapier, longbow, shortbow, crossbow etc.). custom presets to come later
+
+
 //a seperate function used for rolling stats in D&D fifth edition via a method selected by the user via a drop-down selection
 function statRoll() {
      var method = document.getElementById("rollType").value;
