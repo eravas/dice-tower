@@ -19,6 +19,11 @@
                <label for="mods">+ ( </label>
                <input type="number" size="5" name="mods" id="mods" value="0" max="999" min="-999"> )
                <br>
+               <button type="button" onClick="">Roll</button>
+               <select name="preset" id="preset">
+                    <option value="">Longsword</option>
+               </select>
+               <br>
                <button type="button" onClick="statRoll()">Roll Stats</button>
                <select name="rollType" id="rollType">
                     <option value="fourDSixDrop">4d6 Drop Lowest</option>
