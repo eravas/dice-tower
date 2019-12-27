@@ -32,6 +32,7 @@
                     <option value="insanity">1d20 (use at your own risk)</option>
                </select>
                <br>
+               <br>
                <output name="rngQuote" id="rngQuote"></output>
                <br>
                <br>
