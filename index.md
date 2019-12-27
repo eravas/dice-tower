@@ -21,12 +21,12 @@
                <br>
                <button type="button" onClick="">Roll</button>
                <select name="preset" id="preset">
-                    <option value="">Longsword</option>
-                    <option value="">Shortsword</option>
-                    <option value="">Greatsword</option>
-                    <option value="">Rapier</option>
-                    <option value="">Longbow</option>
-                    <option value="">Shortbow</option>
+                    <option value="longsword">Longsword</option>
+                    <option value="shortsword">Shortsword</option>
+                    <option value="greatsword">Greatsword</option>
+                    <option value="rapier">Rapier</option>
+                    <option value="longbow">Longbow</option>
+                    <option value="shortbow">Shortbow</option>
                </select>
                <br>
                <button type="button" onClick="statRoll()">Roll Stats</button>
