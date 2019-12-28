@@ -19,7 +19,7 @@
                <label for="mods">+ ( </label>
                <input type="number" size="5" name="mods" id="mods" value="0" max="999" min="-999"> )
                <br>
-               <button type="button" onClick="">Roll</button>
+               <button type="button" onClick="rollSet()">Roll</button>
                <select name="preset" id="preset">
                     <option value="longsword">Longsword</option>
                     <option value="shortsword">Shortsword</option>
