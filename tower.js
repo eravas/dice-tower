@@ -6,7 +6,30 @@ var n = 1;
 var m = 0;
 
 //presets handled here. for now only basic weapon attacks (longsword, shortsword, rapier, longbow, shortbow, crossbow etc.). custom presets to come later
-
+function rollSet() {
+     var setSet = document.getElementById("preset").value;
+     var rollRes = 0;
+     var rollResMod = 0;
+     if (setSet == "longsword") {
+          rollRes = Math.floor(Math.random() * (8)) + 1;
+     } else if (setSet == "shortsword") {
+          rollRes += Math.floor(Math.random() * (6)) + 1;
+     } else if (setSet == "greatsword") {
+          rollRes += Math.floor(Math.random() * (6)) + 1;
+          rollRes += Math.floor(Math.random() * (6)) + 1;
+     } else if (setSet == "rapier") {
+          rollRes += Math.floor(Math.random() * (8)) + 1;
+     } else if (setSet == "longbow") {
+          rollRes += Math.floor(Math.random() * (8)) + 1;
+     } else if (setSet == "shortbow") {
+          rollRes += Math.floor(Math.random() * (6)) + 1;
+     } else {
+          alert("Whoops, Looks like we rolled a nat 1. Please try again later");
+     }
+     rollResMod = rollRes + document.getElementById("setMods").value;
+     document.getElementById("result").value = rollRes + " + " + document.getElementById("setMods").value;
+     document.getElementById("total").value = rollResMod;
+}
 
 //a seperate function used for rolling stats in D&D fifth edition via a method selected by the user via a drop-down selection
 function statRoll() {
