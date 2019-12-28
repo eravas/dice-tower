@@ -8,8 +8,13 @@ var m = 0;
 //presets handled here. for now only basic weapon attacks (longsword, shortsword, rapier, longbow, shortbow, crossbow etc.). custom presets to come later
 function rollSet() {
      var setSet = document.getElementById("preset").value;
+     var versatileCheck = document.getElementById("versBox").checked;
      if (setSet == "longsword") {
-          dTower(8,1);
+          if (versatileCheck == 1) { 
+               dTower(10,1);
+          } else {
+               dTower(8,1);
+          }
      } else if (setSet == "shortsword") {
           dTower(8,1);
      } else if (setSet == "greatsword") {
