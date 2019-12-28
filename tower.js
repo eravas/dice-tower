@@ -32,7 +32,7 @@ function rollSet() {
      } else { 
           document.getElementById("total").value = rollResMod;
      }
-     document.getElementById("result").value = rollRes + " + " + document.getElementById("setMods").value;
+     document.getElementById("result").value = rollRes + " + " + document.getElementById("setMods").value + " = " + rollResMod;
 }
 
 //a seperate function used for rolling stats in D&D fifth edition via a method selected by the user via a drop-down selection
