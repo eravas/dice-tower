@@ -18,13 +18,15 @@
                <br>
                <button type="button" onClick="rollSet()">Roll</button>
                <select name="preset" id="preset">
-                    <option value="longsword">Longsword</option>
-                    <option value="shortsword">Shortsword</option>
-                    <option value="greatsword">Greatsword</option>
-                    <option value="rapier">Rapier</option>
-                    <option value="longbow">Longbow</option>
-                    <option value="shortbow">Shortbow</option>
+                    <option value="longsword">Longsword (1d8)</option>
+                    <option value="shortsword">Shortsword (1d6)</option>
+                    <option value="greatsword">Greatsword (2d6)</option>
+                    <option value="rapier">Rapier (1d8)</option>
+                    <option value="longbow">Longbow (1d8)</option>
+                    <option value="shortbow">Shortbow (1d6)</option>
                </select>
+               <label for="versBox">Versatile: </label>
+               <input type="checkbox" id="versBox" name="versBox" value="1">
                <br>
                <label for="mods">Modifier: </label>
                <input type="number" size="5" name="mods" id="mods" value="0" max="999" min="-999">
