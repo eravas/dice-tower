@@ -9,7 +9,7 @@ var m = 0;
 function rollSet() {
      var setSet = document.getElementById("preset").value;
      var rollRes = 0;
-     var rollResMod = document.getElementById("setMods").value;
+     var rollResMod = parseFloat(document.getElementById("setMods").value);
      if (setSet == "longsword") {
           rollRes = Math.floor(Math.random() * (8)) + 1;
      } else if (setSet == "shortsword") {
