@@ -11,14 +11,10 @@
                <label for="sides">Number of sides:</label>
                <input type="number" size="5" name="sides" id="sides" value="8" min="2">
                <br>
-               <br>
                <label for="critBox">Critical: </label>
                <input type="checkbox" id="critBox" name="critBox" value="1">
                <br>
                <button type="button" onClick="varSet()">Roll the dice!</button>
-               <label for="mods">+ ( </label>
-               <input type="number" size="5" name="mods" id="mods" value="0" max="999" min="-999"> )
-               <br>
                <button type="button" onClick="rollSet()">Roll</button>
                <select name="preset" id="preset">
                     <option value="longsword">Longsword</option>
@@ -28,8 +24,9 @@
                     <option value="longbow">Longbow</option>
                     <option value="shortbow">Shortbow</option>
                </select>
-               <label for="mods">+ </label>
-               <input type="number" size="5" name="setMods" id="setMods" value="0" max="999" min="-999">
+               <br>
+               <label for="mods">Modifier: + </label>
+               <input type="number" size="5" name="mods" id="mods" value="0" max="999" min="-999">
                <br>
                <button type="button" onClick="statRoll()">Roll Stats</button>
                <select name="rollType" id="rollType">
