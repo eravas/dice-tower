@@ -6,7 +6,7 @@
           <form  name="input" id="input" action="">
                <br>
                <label for="numberDice">Number of dice:</label>
-               <input type="number" size="5" name="numberDice" id="numberDice" value="6" max="9999" min="1">
+               <input type="number" size="5" name="numberDice" id="numberDice" value="6" min="1">
                <br>
                <label for="sides">Number of sides:</label>
                <input type="number" size="5" name="sides" id="sides" value="8" min="2">
