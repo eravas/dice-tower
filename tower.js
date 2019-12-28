@@ -8,8 +8,6 @@ var m = 0;
 //presets handled here. for now only basic weapon attacks (longsword, shortsword, rapier, longbow, shortbow, crossbow etc.). custom presets to come later
 function rollSet() {
      var setSet = document.getElementById("preset").value;
-     var rollRes = 0;
-     var rollResMod = parseFloat(document.getElementById("setMods").value);
      if (setSet == "longsword") {
           dTower(8,1);
      } else if (setSet == "shortsword") {
