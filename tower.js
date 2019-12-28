@@ -10,23 +10,31 @@ function rollSet() {
      var setSet = document.getElementById("preset").value;
      var rollRes = 0;
      var rollResMod = parseFloat(document.getElementById("setMods").value);
+     var quoDiv;
      if (setSet == "longsword") {
           rollRes = Math.floor(Math.random() * (8)) + 1;
+          var quoDiv = 1;
      } else if (setSet == "shortsword") {
           rollRes += Math.floor(Math.random() * (6)) + 1;
+          var quoDiv = 1;
      } else if (setSet == "greatsword") {
           rollRes += Math.floor(Math.random() * (6)) + 1;
           rollRes += Math.floor(Math.random() * (6)) + 1;
+          var quoDiv = 2;
      } else if (setSet == "rapier") {
           rollRes += Math.floor(Math.random() * (8)) + 1;
+          var quoDiv = 1;
      } else if (setSet == "longbow") {
           rollRes += Math.floor(Math.random() * (8)) + 1;
+          var quoDiv = 1;
      } else if (setSet == "shortbow") {
           rollRes += Math.floor(Math.random() * (6)) + 1;
+          var quoDiv = 1;
      } else {
           alert("Whoops, Looks like we rolled a nat 1. Please try again later");
      }
      rollResMod += rollRes;
+     var sum = rollRes;
      if (rollResMod <= 0) { 
           document.getElementById("result").value = 0;
      } else { 
@@ -129,15 +137,16 @@ function dTower(sides,number) {
                     output += "\n";
                } 
           }
-          document.getElementById("total").value=sum + " + " + modifiers + " = " + wMods
+          document.getElementById("total").value = sum + " + " + modifiers + " = " + wMods
           document.getElementById("result").value=output
      }
+     var quoDiv = document.getElementById("numberDice").value;
      randMess();
 }
 // this handles the random message
 function randMess() {
      var rng;
-     if (sum / document.getElementById("numberDice").value == 1) {
+     if ( sum / quoDiv == 1) {
           rng = 0; 
      } else {
           rng = Math.floor(Math.random() * 26) + 1;
