@@ -15,6 +15,7 @@
                <input type="checkbox" id="critBox" name="critBox" value="1">
                <br>
                <button type="button" onClick="varSet()">Roll the dice!</button>
+               <br>
                <button type="button" onClick="rollSet()">Roll</button>
                <select name="preset" id="preset">
                     <option value="longsword">Longsword</option>
@@ -25,7 +26,7 @@
                     <option value="shortbow">Shortbow</option>
                </select>
                <br>
-               <label for="mods">Modifier: + </label>
+               <label for="mods">Modifier: </label>
                <input type="number" size="5" name="mods" id="mods" value="0" max="999" min="-999">
                <br>
                <button type="button" onClick="statRoll()">Roll Stats</button>
