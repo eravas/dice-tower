@@ -28,6 +28,8 @@
                     <option value="longbow">Longbow</option>
                     <option value="shortbow">Shortbow</option>
                </select>
+               <label for="mods">+ </label>
+               <input type="number" size="5" name="setMods" id="setMods" value="0" max="999" min="-999">
                <br>
                <button type="button" onClick="statRoll()">Roll Stats</button>
                <select name="rollType" id="rollType">
