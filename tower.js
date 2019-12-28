@@ -11,35 +11,20 @@ function rollSet() {
      var rollRes = 0;
      var rollResMod = parseFloat(document.getElementById("setMods").value);
      if (setSet == "longsword") {
-          rollRes = Math.floor(Math.random() * (8)) + 1;
-          var quoDiv = 1;
+          dTower(8,1);
      } else if (setSet == "shortsword") {
-          rollRes += Math.floor(Math.random() * (6)) + 1;
-          var quoDiv = 1;
+          dTower(8,1);
      } else if (setSet == "greatsword") {
-          rollRes += Math.floor(Math.random() * (6)) + 1;
-          rollRes += Math.floor(Math.random() * (6)) + 1;
-          var quoDiv = 2;
+          dTower(6,2);
      } else if (setSet == "rapier") {
-          rollRes += Math.floor(Math.random() * (8)) + 1;
-          var quoDiv = 1;
+          dTower(8,1);
      } else if (setSet == "longbow") {
-          rollRes += Math.floor(Math.random() * (8)) + 1;
-          var quoDiv = 1;
+          dTower(8,1);
      } else if (setSet == "shortbow") {
-          rollRes += Math.floor(Math.random() * (6)) + 1;
-          var quoDiv = 1;
+          dTower(8,1);
      } else {
           alert("Whoops, Looks like we rolled a nat 1. Please try again later");
      }
-     rollResMod += rollRes;
-     if (rollResMod <= 0) { 
-          document.getElementById("result").value = 0;
-     } else { 
-          document.getElementById("result").value = rollResMod;
-     }
-     document.getElementById("total").value = rollRes + " + " + document.getElementById("setMods").value + " = " + rollResMod;
-     randMess();
 }
 
 //a seperate function used for rolling stats in D&D fifth edition via a method selected by the user via a drop-down selection
@@ -105,7 +90,6 @@ function varSet() {
      }   
 }
 //this is the function to roll dice. takes the number of dice the user wants to roll, the number of sides on those dice, and rolls them.
-//also displays a random message every time it is called and checks for special cases (maximum value rolled, all 1s rolled etc.) which trigger special messages
 function dTower(sides,number) {
      var output = "";
      var sum = 0;
