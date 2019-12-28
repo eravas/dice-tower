@@ -10,7 +10,6 @@ function rollSet() {
      var setSet = document.getElementById("preset").value;
      var rollRes = 0;
      var rollResMod = parseFloat(document.getElementById("setMods").value);
-     var quoDiv;
      if (setSet == "longsword") {
           rollRes = Math.floor(Math.random() * (8)) + 1;
           var quoDiv = 1;
@@ -34,7 +33,6 @@ function rollSet() {
           alert("Whoops, Looks like we rolled a nat 1. Please try again later");
      }
      rollResMod += rollRes;
-     var sum = rollRes;
      if (rollResMod <= 0) { 
           document.getElementById("result").value = 0;
      } else { 
@@ -140,17 +138,11 @@ function dTower(sides,number) {
           document.getElementById("total").value = sum + " + " + modifiers + " = " + wMods
           document.getElementById("result").value=output
      }
-     var quoDiv = document.getElementById("numberDice").value;
      randMess();
 }
 // this handles the random message
 function randMess() {
-     var rng;
-     if ( sum / quoDiv == 1) {
-          rng = 0; 
-     } else {
-          rng = Math.floor(Math.random() * 26) + 1;
-     }
+     var rng = Math.floor(Math.random() * 26);
      switch (rng) {
           case 0:
                document.getElementById("rngQuote").value="It is not the bee that kills, but the swarm";
