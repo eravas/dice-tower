@@ -18,7 +18,7 @@
                <br>
                <button type="button" onClick="rollSet()">Roll</button>
                <select name="preset" id="preset">
-                    <option value="longsword">Longsword (1d8)</option>
+                    <option value="longsword">Longsword (1d8/1d10)</option>
                     <option value="shortsword">Shortsword (1d6)</option>
                     <option value="greatsword">Greatsword (2d6)</option>
                     <option value="rapier">Rapier (1d8)</option>
