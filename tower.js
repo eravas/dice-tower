@@ -33,6 +33,7 @@ function rollSet() {
           document.getElementById("result").value = rollResMod;
      }
      document.getElementById("total").value = rollRes + " + " + document.getElementById("setMods").value + " = " + rollResMod;
+     randMess();
 }
 
 //a seperate function used for rolling stats in D&D fifth edition via a method selected by the user via a drop-down selection
@@ -131,100 +132,103 @@ function dTower(sides,number) {
           document.getElementById("total").value=sum + " + " + modifiers + " = " + wMods
           document.getElementById("result").value=output
      }
+     randMess();
+}
+// this handles the random message
+function randMess() {
      var rng;
-  if (sum / document.getElementById("numberDice").value == 1) {
+     if (sum / document.getElementById("numberDice").value == 1) {
           rng = 0; 
      } else {
           rng = Math.floor(Math.random() * 26) + 1;
      }
-  switch (rng) {
-    case 0:
-      document.getElementById("rngQuote").value="It is not the bee that kills, but the swarm";
-      break;
-    case 1:
-      document.getElementById("rngQuote").value="You viciously tap the enemy. They are mildly annoyed";
-      break;
-    case 2:
-      document.getElementById("rngQuote").value="You land a powerful strike with deadly precision...on the enemy's shield";
-      break;
-    case 3:
-      document.getElementById("rngQuote").value="Word of advice: If possible, vaccinate your children";
-      break;
-    case 4:
-      document.getElementById("rngQuote").value="You display a show of strength. It wasn't much";
-      break;
-    case 5:
-      document.getElementById("rngQuote").value="You stab the enemy....while holding the blade backwards.";
-      break;
-    case 6:
-      document.getElementById("rngQuote").value="You swing at the enemy. They get a nice taste of the handle";
-      break;
-    case 7:
-      document.getElementById("rngQuote").value="You throw your spear... backwards";
-      break;
-    case 8:
-      document.getElementById("rngQuote").value="Now that's a lot of damage!";
-      break;
-    case 9:
-      document.getElementById("rngQuote").value="This is where the fun begins";
-      break;
-    case 10:
-      document.getElementById("rngQuote").value="You should try spinning, I hear it's a good trick";
-      break;
-    case 11:
-      document.getElementById("rngQuote").value="It's over, he has the high ground";
-      break;
-    case 12:
-      document.getElementById("rngQuote").value="I am a creature of the night";
-      break;
-    case 13:
-      document.getElementById("rngQuote").value="There are too many of them, what are we going to do?";
-      break;
-    case 14:
-      document.getElementById("rngQuote").value="Hello there!";
-      break;
-    case 15:
-      document.getElementById("rngQuote").value="You are a bold one";
-      break;
-    case 16:
-      document.getElementById("rngQuote").value="You should have gone for the head";
-      break;
-    case 17:
-      document.getElementById("rngQuote").value="To truly live, one must do more than simply not die";
-      break;
-    case 18:
-      document.getElementById("rngQuote").value="Form Blazing Sword!";
-      break;
-    case 19:
-      document.getElementById("rngQuote").value="By the power of Greyskull!";
-      break;
-    case 20:
-      document.getElementById("rngQuote").value="I have the power!";
-      break;
-    case 21:
-      document.getElementById("rngQuote").value="Patience yields focus";
-      break;
-    case 22:
-      document.getElementById("rngQuote").value="VREPIT SA";
-      break;
-    case 23:
-      document.getElementById("rngQuote").value="Later pala-dudes";
-      break;
-    case 24:
-      document.getElementById("rngQuote").value="If you get too worried about what could go wrong, you might miss a chance to do something great.";
-      break;
-    case 25:
-      document.getElementById("rngQuote").value="\"Stay back, I don't know how to use this thing!\"";
-      break;
-    case 26:
-      document.getElementById("rngQuote").value="Vommit is not an approved lubricant for engine systems";
-      break;
-    default:
-      document.getElementById("rngQuote").value="Subscribe to Pewdiepie";
-      break;
+     switch (rng) {
+          case 0:
+               document.getElementById("rngQuote").value="It is not the bee that kills, but the swarm";
+               break;
+          case 1:
+               document.getElementById("rngQuote").value="You viciously tap the enemy. They are mildly annoyed";
+               break;
+          case 2:
+               document.getElementById("rngQuote").value="You land a powerful strike with deadly precision...on the enemy's shield";
+               break;
+          case 3:
+               document.getElementById("rngQuote").value="Word of advice: If possible, vaccinate your children";
+               break;
+          case 4:
+               document.getElementById("rngQuote").value="You display a show of strength. It wasn't much";
+               break;
+          case 5:
+               document.getElementById("rngQuote").value="You stab the enemy....while holding the blade backwards.";
+               break;
+          case 6:
+               document.getElementById("rngQuote").value="You swing at the enemy. They get a nice taste of the handle";
+               break;
+          case 7:
+               document.getElementById("rngQuote").value="You throw your spear... backwards";
+               break;
+          case 8:
+               document.getElementById("rngQuote").value="Now that's a lot of damage!";
+               break;
+          case 9:
+               document.getElementById("rngQuote").value="This is where the fun begins";
+               break;
+          case 10:
+               document.getElementById("rngQuote").value="You should try spinning, I hear it's a good trick";
+               break;
+          case 11:
+               document.getElementById("rngQuote").value="It's over, he has the high ground";
+               break;
+          case 12:
+               document.getElementById("rngQuote").value="I am a creature of the night";
+               break;
+          case 13:
+               document.getElementById("rngQuote").value="There are too many of them, what are we going to do?";
+               break;
+          case 14:
+               document.getElementById("rngQuote").value="Hello there!";
+               break;
+          case 15:
+               document.getElementById("rngQuote").value="You are a bold one";
+               break;
+          case 16:
+               document.getElementById("rngQuote").value="You should have gone for the head";
+               break;
+          case 17:
+               document.getElementById("rngQuote").value="To truly live, one must do more than simply not die";
+               break;
+          case 18:
+               document.getElementById("rngQuote").value="Form Blazing Sword!";
+               break;
+          case 19:
+               document.getElementById("rngQuote").value="By the power of Greyskull!";
+               break;
+          case 20:
+               document.getElementById("rngQuote").value="I have the power!";
+               break;
+          case 21:
+               document.getElementById("rngQuote").value="Patience yields focus";
+               break;
+          case 22:
+               document.getElementById("rngQuote").value="VREPIT SA";
+               break;
+          case 23:
+               document.getElementById("rngQuote").value="Later pala-dudes";
+               break;
+          case 24:
+               document.getElementById("rngQuote").value="If you get too worried about what could go wrong, you might miss a chance to do something great.";
+               break;
+          case 25:
+               document.getElementById("rngQuote").value="\"Stay back, I don't know how to use this thing!\"";
+               break;
+          case 26:
+               document.getElementById("rngQuote").value="Vommit is not an approved lubricant for engine systems";
+               break;
+          default:
+               document.getElementById("rngQuote").value="#YangGang";
+               break;
   }
 }
-
 //this sets the initial value of the random message
 function initQuote() {
      document.getElementById("rngQuote").value="Take a chance, roll the dice";
