@@ -17,7 +17,9 @@
                <button type="button" onClick="varSet()">Roll the dice!</button>
                <br>
                <br>
+               <label for="setPreset">Custom Preset Code: </label>
                <input name="setPreset" id="setPreset">
+               <button type="button" onClick="preSet()">Submit</button>
                <br>
                <button type="button" onClick="rollSet()">Roll</button>
                <select name="preset" id="preset">
