@@ -16,6 +16,9 @@
                <br>
                <button type="button" onClick="varSet()">Roll the dice!</button>
                <br>
+               <br>
+               <input name="setPreset" id="setPreset">
+               <br>
                <button type="button" onClick="rollSet()">Roll</button>
                <select name="preset" id="preset">
                     <option value="longsword">Longsword (1d8/1d10)</option>
@@ -27,6 +30,7 @@
                </select>
                <label for="versBox">Versatile: </label>
                <input type="checkbox" id="versBox" name="versBox" value="1">
+               <br>
                <br>
                <label for="mods">Modifier: </label>
                <input type="number" size="5" name="mods" id="mods" value="0" max="999" min="-999">
