@@ -30,6 +30,9 @@ function rollSet() {
      }
 }
 
+function preSet() {
+     var presetCode = document.getElementById("setPreset").value;
+}
 //a seperate function used for rolling stats in D&D fifth edition via a method selected by the user via a drop-down selection
 function statRoll() {
      var method = document.getElementById("rollType").value;
