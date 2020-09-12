@@ -31,7 +31,12 @@ function rollSet() {
 }
 
 function preSet() {
-     var presetCode = document.getElementById("setPreset").value;
+     //preset code will have the following format: "![name],[number of dice],[number of sides],[number of sides versatile],[damage type]" repeating for multiple damage types, each preset is sperated by exclamation marks
+     //this line grabs the whole preset code and stores it in a string before splitting it into seperate presets into an array
+     var wholePresetCode = document.getElementById("setPreset").value;
+     var presetArray = wholePresetCode.split("!");
+     //get the length of the preset array, the total number of presets
+     var loopFor = presetArray.length;
 }
 //a seperate function used for rolling stats in D&D fifth edition via a method selected by the user via a drop-down selection
 function statRoll() {
