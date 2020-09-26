@@ -30,6 +30,21 @@ function rollSet() {
      }
 }
 
+function preSet() {
+     //preset code will have the following format: "![name],[number of dice],[number of sides],[number of sides versatile],[damage type]" repeating for multiple damage types, each preset is sperated by exclamation marks
+     //this line grabs the whole preset code and stores it in a string before splitting it into seperate presets into an array
+     var wholePresetCode = document.getElementById("setPreset").value;
+     var presetArray = wholePresetCode.split("!");
+     //get the length of the preset array, the total number of presets, and loop the following that many times
+     for (i = 0; i < presetArray.length; i++) {
+          //creates array "preset" where each element is one aspect of the preset (i.e type of dice, number of sides, etc.) and sets the name of the preset
+          var preset = presetArray[i].split(",");
+          var thisPreset = document.createElement(preset[0]);
+          thisPreset.text = preset[0]
+          thisPreset.id = i + 1;
+          document.getElementById("presetMenu").add(thisPreset);
+     }
+}
 //a seperate function used for rolling stats in D&D fifth edition via a method selected by the user via a drop-down selection
 function statRoll() {
      var method = document.getElementById("rollType").value;
