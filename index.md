@@ -22,7 +22,7 @@
                <button type="button" onClick="preSet()">Submit</button>
                <br>
                <button type="button" onClick="rollSet()">Roll</button>
-               <select name="preset" id="preset">
+               <select name="presetMenu" id="presetMenu">
                </select>
                <label for="versBox">Versatile: </label>
                <input type="checkbox" id="versBox" name="versBox" value="1">
