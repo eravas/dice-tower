@@ -35,9 +35,8 @@ function preSet() {
      //this line grabs the whole preset code and stores it in a string before splitting it into seperate presets into an array
      var wholePresetCode = document.getElementById("setPreset").value;
      var presetArray = wholePresetCode.split("!");
-     //get the length of the preset array, the total number of presets, and loop the following that many times
+     //adds preset elements to the dropdown menu
      for (i = 0; i < presetArray.length; i++) {
-          //creates array "preset" where each element is one aspect of the preset (i.e type of dice, number of sides, etc.) and sets the name of the preset
           var preset = presetArray[i].split(",");
           var thisPreset = document.createElement("option");
           thisPreset.text = preset[0]
