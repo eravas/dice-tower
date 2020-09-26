@@ -39,9 +39,9 @@ function preSet() {
      for (i = 0; i < presetArray.length; i++) {
           //creates array "preset" where each element is one aspect of the preset (i.e type of dice, number of sides, etc.) and sets the name of the preset
           var preset = presetArray[i].split(",");
-          var thisPreset = document.createElement(preset[0]);
+          var thisPreset = document.createElement("option");
           thisPreset.text = preset[0]
-          thisPreset.id = i + 1;
+          thisPreset.id = preset[0];
           document.getElementById("presetMenu").add(thisPreset);
      }
 }
