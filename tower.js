@@ -26,7 +26,8 @@ function rollSet() {
      var setSet = document.getElementById("presetMenu").value + ",";
      var versatileCheck = document.getElementById("versBox").checked;
      var presetArray = wholePresetCode.split(setSet);
-     var preset = presetArray[1].split(",");
+     var getPreset = presetArray[1];
+     var preset = getPreset.split(",")
      if (versatileCheck == 1) {
           dTower(preset[2], preset[0]);
      } else {
