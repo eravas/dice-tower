@@ -16,7 +16,7 @@ function preSet() {
      for (i = 0; i < presetArray.length; i++) {
           var preset = presetArray[i].split(",");
           var thisPreset = document.createElement("option");
-          thisPreset.text = preset[0] + "(" + preset[4] + " damage)";
+          thisPreset.text = preset[0] + " (" + preset[4] + " damage)";
           thisPreset.id = preset[0];
           document.getElementById("presetMenu").add(thisPreset);
      }
@@ -25,9 +25,9 @@ function preSet() {
 function rollSet() {
      var setSet = document.getElementById("presetMenu").value + ",";
      var versatileCheck = document.getElementById("versBox").checked;
-     var presetArray = wholePresetCode.split(setSet);
-     var getPreset = presetArray[1];
-     var preset = getPreset.split(",")
+     var splitter = setSet.split(" ");
+     var presetArray = wholePresetCode.split(splitter[0]);
+     var preset = presetArray[1].split(",")
      if (versatileCheck == 1) {
           dTower(preset[2], preset[0]);
      } else {
