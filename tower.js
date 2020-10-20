@@ -28,6 +28,7 @@ function rollSet() {
      var splitter = setSet.split(" ");
      var presetArray = wholePresetCode.split(splitter[0]);
      var preset = presetArray[1].split(",")
+     console.log(preset)
      if (versatileCheck == 1) {
           dTower(preset[2], preset[0]);
      } else {
