@@ -23,7 +23,7 @@ function preSet() {
 }
 //presets handled here. sperate handling of different damage types to come later
 function rollSet() {
-     var setSet = document.getElementById("preset").value + ",";
+     var setSet = document.getElementById("presetMenu").value + ",";
      var versatileCheck = document.getElementById("versBox").checked;
      var presetArray = wholePresetCode.split(setSet);
      var preset = presetArray[1].split(",");
