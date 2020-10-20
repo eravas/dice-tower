@@ -13,9 +13,9 @@ function preSet() {
      wholePresetCode = document.getElementById("setPreset").value;
      var presetArray = wholePresetCode.split("!");
      //clears the preset box
-     document.getElementById("presetMenu").add("clearing");
-     while (document.getElementById("setPreset").length > 0) {
-          document.getElementById("setPreset").remove(0);
+     //document.getElementById("presetMenu").add("clearing");
+     while (document.getElementById("presetMenu").options.length > 0) {
+          document.getElementById("presetMenu").remove(0);
      }
      //adds preset elements to the dropdown menu
      for (i = 0; i < presetArray.length; i++) {
