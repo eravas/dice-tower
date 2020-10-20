@@ -1,33 +1,36 @@
 //all of the js code
 
-//two variables used to store the value of input parameters
+//two variables used to store the value of input parameters and modifiers
 var s = 20;
 var n = 1;
 var m = 0;
-
-//presets handled here. for now only basic weapon attacks (longsword, shortsword, rapier, longbow, shortbow, crossbow etc.). custom presets to come later
-function rollSet() {
-     var setSet = document.getElementById("preset").value;
-     var versatileCheck = document.getElementById("versBox").checked;
-     if (setSet == "longsword") {
-          if (versatileCheck == 1) { 
-               dTower(10,1);
-          } else {
-               dTower(8,1);
-          }
-     } else if (setSet == "shortsword") {
-          dTower(8,1);
-     } else if (setSet == "greatsword") {
-          dTower(6,2);
-     } else if (setSet == "rapier") {
-          dTower(8,1);
-     } else if (setSet == "longbow") {
-          dTower(8,1);
-     } else if (setSet == "shortbow") {
-          dTower(8,1);
-     } else {
-          alert("Whoops, Looks like we rolled a nat 1. Please try again later");
+//storing preset code
+var wholePresetCode = "";
+//setting preset dropdown menu
+function preSet() {
+     //preset code will have the following format: "![name],[number of dice],[number of sides],[number of sides versatile],[damage type]" repeating for multiple damage types, each preset is sperated by exclamation marks
+     //this line grabs the whole preset code and stores it in a string before splitting it into seperate presets into an array
+     wholePresetCode = document.getElementById("setPreset").value;
+     var presetArray = wholePresetCode.split("!");
+     //adds preset elements to the dropdown menu
+     for (i = 0; i < presetArray.length; i++) {
+          var preset = presetArray[i].split(",");
+          var thisPreset = document.createElement("option");
+          thisPreset.text = preset[0] + "(" + preset[4] + " damage)";
+          thisPreset.id = preset[0];
+          document.getElementById("presetMenu").add(thisPreset);
      }
+}
+//presets handled here. sperate handling of different damage types to come later
+function rollSet() {
+     var setSet = document.getElementById("preset").value + ",";
+     var versatileCheck = document.getElementById("versBox").checked;
+     var presetArray = wholePresetCode.split(setSet);
+     var preset = presetArray[1].split(",");
+     if (versatileCheck == 1) {
+          dTower(preset[2], preset[0]);
+     } else {
+          dTower(preset[1], preset[0]);
 }
 
 //a seperate function used for rolling stats in D&D fifth edition via a method selected by the user via a drop-down selection
