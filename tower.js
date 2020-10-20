@@ -12,6 +12,10 @@ function preSet() {
      //this line grabs the whole preset code and stores it in a string before splitting it into seperate presets into an array
      wholePresetCode = document.getElementById("setPreset").value;
      var presetArray = wholePresetCode.split("!");
+     //clears the preset box
+     while (document.getElementById("setPreset").options.length > 0) {
+          document.getElementById("setPreset").remove(0);
+     }
      //adds preset elements to the dropdown menu
      for (i = 0; i < presetArray.length; i++) {
           var preset = presetArray[i].split(",");
@@ -20,7 +24,7 @@ function preSet() {
           thisPreset.id = preset[0];
           document.getElementById("presetMenu").add(thisPreset);
      }
-     document.getElementById("presetMenu").remove(0);
+     //document.getElementById("presetMenu").remove(0);
 }
 //presets handled here. sperate handling of different damage types to come later
 function rollSet() {
