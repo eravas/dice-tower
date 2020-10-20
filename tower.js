@@ -30,9 +30,9 @@ function rollSet() {
      var preset = presetArray[1].split(",")
      console.log(preset)
      if (versatileCheck == 1) {
-          dTower(preset[2], preset[0]);
+          dTower(preset[3], preset[1]);
      } else {
-          dTower(preset[1], preset[0]);
+          dTower(preset[2], preset[1]);
      }
 }
 
