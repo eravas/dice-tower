@@ -24,7 +24,8 @@ function preSet() {
           thisPreset.id = preset[0];
           document.getElementById("presetMenu").add(thisPreset);
      }
-     //document.getElementById("presetMenu").remove(0);
+     //removes the first element from the list, which is not part of the presets
+     document.getElementById("presetMenu").remove(0);
 }
 //presets handled here. sperate handling of different damage types to come later
 function rollSet() {
@@ -33,7 +34,6 @@ function rollSet() {
      var splitter = setSet.split(" ");
      var presetArray = wholePresetCode.split(splitter[0]);
      var preset = presetArray[1].split(",")
-     console.log(preset)
      if (versatileCheck == 1) {
           dTower(parseInt(preset[3]), parseInt(preset[1]));
      } else {
