@@ -31,6 +31,7 @@ function rollSet() {
           dTower(preset[2], preset[0]);
      } else {
           dTower(preset[1], preset[0]);
+     }
 }
 
 //a seperate function used for rolling stats in D&D fifth edition via a method selected by the user via a drop-down selection
