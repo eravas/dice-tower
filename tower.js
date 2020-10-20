@@ -20,6 +20,7 @@ function preSet() {
           thisPreset.id = preset[0];
           document.getElementById("presetMenu").add(thisPreset);
      }
+     document.getElementById("presetMenu").remove(0);
 }
 //presets handled here. sperate handling of different damage types to come later
 function rollSet() {
