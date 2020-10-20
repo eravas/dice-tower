@@ -13,6 +13,7 @@ function preSet() {
      wholePresetCode = document.getElementById("setPreset").value;
      var presetArray = wholePresetCode.split("!");
      //clears the preset box
+     document.getElementById("presetMenu").add("clearing");
      while (document.getElementById("setPreset").options.length > 0) {
           document.getElementById("setPreset").remove(0);
      }
