@@ -33,7 +33,6 @@
                     ![name],[number of dice],[dice type],[dice type versatile],[damage type] (For example:"!longsword,1,8,10,sharp!greatsword,2,6,6,sharp")
                </p>
                <br>
-               <br>
                <label for="mods">Modifier: </label>
                <input type="number" size="5" name="mods" id="mods" value="0" max="999" min="-999">
                <br>
