@@ -17,12 +17,6 @@
                <button type="button" onClick="varSet()">Roll the dice!</button>
                <br>
                <br>
-               <p>
-                    Format: 
-                    <br>
-                    ![name],[number of dice],[dice type],[dice type versatile],[damage type] (For example:"!longsword,1,8,10,sharp!greatsword,2,6,6,sharp" will add a longsword and a greatsword option)
-               </p>
-               <br>
                <label for="setPreset">Custom Preset Code: </label>
                <input name="setPreset" id="setPreset">
                <button type="button" onClick="preSet()">Submit</button>
@@ -32,6 +26,12 @@
                </select>
                <label for="versBox">Versatile: </label>
                <input type="checkbox" id="versBox" name="versBox" value="1">
+               <br>
+               <p>
+                    Format: 
+                    <br>
+                    ![name],[number of dice],[dice type],[dice type versatile],[damage type] (For example:"!longsword,1,8,10,sharp!greatsword,2,6,6,sharp")
+               </p>
                <br>
                <br>
                <label for="mods">Modifier: </label>
