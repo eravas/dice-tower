@@ -19,6 +19,7 @@
                <br>
                <p>
                     Format: 
+                    <br>
                     ![name],[number of dice],[dice type],[dice type versatile],[damage type] (For example:"!longsword,1,8,10,sharp!greatsword,2,6,6,sharp" will add a longsword and a greatsword option)
                </p>
                <br>
