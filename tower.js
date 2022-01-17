@@ -237,7 +237,7 @@ function randMess() {
 function initQuote() {
      document.getElementById("rngQuote").value="Take a chance, roll the dice";
      if (localStorage.getItem('presetArray')) {
-         presetCodeArray = JSON.parse(localStorage.getItem('presetArray'));
+         presetCodeArray += [JSON.parse(localStorage.getItem('presetArray'))];
          console.log(presetCodeArray);
      }
      for (let i = 0; i < presetCodeArray.length; i++) {
