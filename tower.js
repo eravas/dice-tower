@@ -242,7 +242,6 @@ function initQuote() {
      }
      for (let i = 0; i < presetCodeArray.length; i++) {
          wholePresetCode = presetCodeArray[i];
-         console.log(wholePresetCode);
          preSet();
      }
 }
