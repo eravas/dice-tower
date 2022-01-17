@@ -29,7 +29,7 @@ function preSet() {
 }
 
 function preSetPrimer() {
-    if (!(document.getElementById("setPreset").value in wholePresetCode.toString())) {
+    if (!(wholePresetCode.includes(document.getElementById("setPreset").value))) {
         wholePresetCode += document.getElementById("setPreset").value;
     }
     presetCodeArray += wholePresetCode;
