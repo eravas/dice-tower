@@ -6,7 +6,7 @@ var n = 1;
 var m = 0;
 //storing preset code
 var wholePresetCode = "";
-var presetCodeArray = [];
+var presetCodeArray = "";
 function preSetPrimer() {
     wholePresetCode = document.getElementById("setPreset").value;
     preSet();
@@ -30,7 +30,7 @@ function preSet() {
      }
      //removes the first element from the list, which is not part of the presets
      document.getElementById("presetMenu").remove(0);
-     localStorage.setItem('presetArray', JSON.stringify(presetCodeArray));
+     localStorage.setItem('presetArrayStored', presetCodeArray);
 }
 //presets handled here. sperate handling of different damage types to come later
 function rollSet() {
@@ -236,12 +236,10 @@ function randMess() {
 //this sets the initial value of the random message
 function initQuote() {
      document.getElementById("rngQuote").value="Take a chance, roll the dice";
-     if (localStorage.getItem('presetArray')) {
-         presetCodeArray += [JSON.parse(localStorage.getItem('presetArray'))];
+     if (localStorage.getItem('presetArrayStored')) {
+         presetCodeArray += localStorage.getItem('presetArrayStored');
          console.log(presetCodeArray);
      }
-     for (let i = 0; i < presetCodeArray.length; i++) {
-         wholePresetCode = presetCodeArray[i];
-         preSet();
-     }
+     wholePresetCode = presetCodeArray;
+     preSet();
 }
