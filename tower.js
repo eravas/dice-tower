@@ -6,11 +6,21 @@ var n = 1;
 var m = 0;
 //storing preset code
 var wholePresetCode = "";
+//array containing all of the preset code
+var presetCodeArray = [];
+if (localStorage.getItem('presetArray')) {
+    presetCodeArray = JSON.parse(localStorage.getItem('presetArray'));
+}
+for (let i = 0; i < presetCodeArray.length; i++) {
+    wholePresetCode = presetCodeArray[i];
+    preSet();
+}
 //setting preset dropdown menu
 function preSet() {
      //preset code will have the following format: "![name],[number of dice],[number of sides],[number of sides versatile],[damage type]" repeating for multiple damage types, each preset is sperated by exclamation marks
      //this line grabs the whole preset code and stores it in a string before splitting it into seperate presets into an array
      wholePresetCode = document.getElementById("setPreset").value;
+     presetCodeArray += wholePresetCode;
      var presetArray = wholePresetCode.split("!");
      //clears the preset box
      while (document.getElementById("presetMenu").options.length > 0) {
@@ -26,6 +36,7 @@ function preSet() {
      }
      //removes the first element from the list, which is not part of the presets
      document.getElementById("presetMenu").remove(0);
+     localStorage.setItem('presetArray', JSON.stringify(presetCodeArray));
 }
 //presets handled here. sperate handling of different damage types to come later
 function rollSet() {
@@ -97,11 +108,11 @@ function varSet() {
      s = document.getElementById("sides").value;
      n = document.getElementById("numberDice").value;
      m = document.getElementById("mods").value;
-     if (n > 9999 || n < 1 || m > 999 || m < -999 || s < 2) { 
-          alert("By decree of Bahamut the wise, in all his wisdom, rolling more than 9999 of less than 1 dice or with a modifier greater than 999 or less than -999 is forbidden at this time."); 
-     } else { 
-          dTower(s,n); 
-     }   
+     if (n > 9999 || n < 1 || m > 999 || m < -999 || s < 2) {
+          alert("By decree of Bahamut the wise, in all his wisdom, rolling more than 9999 of less than 1 dice or with a modifier greater than 999 or less than -999 is forbidden at this time.");
+     } else {
+          dTower(s,n);
+     }
 }
 //this is the function to roll dice. takes the number of dice the user wants to roll, the number of sides on those dice, and rolls them.
 function dTower(sides,number) {
@@ -119,7 +130,7 @@ function dTower(sides,number) {
                wMods += roll;
                if (i % 15 == 0) {
                     output += "\n";
-               } 
+               }
           }
           document.getElementById("total").value=sum + " + " + modifiers + " = " + wMods
           document.getElementById("result").value=output
@@ -131,7 +142,7 @@ function dTower(sides,number) {
                wMods += roll;
                if (i % 15 == 0) {
                     output += "\n";
-               } 
+               }
           }
           document.getElementById("total").value = sum + " + " + modifiers + " = " + wMods
           document.getElementById("result").value=output
