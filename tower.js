@@ -12,10 +12,10 @@ var presetCodeArray = "";
 function preSet() {
      //preset code will have the following format: "![name],[number of dice],[number of sides],[number of sides versatile],[damage type]" repeating for multiple damage types, each preset is sperated by exclamation marks
      var presetArray = wholePresetCode.split("!");
-     /*clears the preset box
+     //clears the preset box
      while (document.getElementById("presetMenu").options.length > 0) {
           document.getElementById("presetMenu").remove(0);
-     }*/
+     }
      //adds preset elements to the dropdown menu
      for (i = 0; i < presetArray.length; i++) {
           var preset = presetArray[i].split(",");
@@ -29,7 +29,9 @@ function preSet() {
 }
 
 function preSetPrimer() {
-    wholePresetCode = document.getElementById("setPreset").value;
+    if (!document.getElementById("setPreset").value in wholePresetCode) {
+        wholePresetCode += document.getElementById("setPreset").value;
+    }
     presetCodeArray += wholePresetCode;
     localStorage.setItem('presetArrayStored', presetCodeArray);
     preSet();
