@@ -7,14 +7,10 @@ var m = 0;
 //storing preset code
 var wholePresetCode = "";
 var presetCodeArray = "";
-function preSetPrimer() {
-    wholePresetCode = document.getElementById("setPreset").value;
-    preSet();
-}
+
 //setting preset dropdown menu
 function preSet() {
      //preset code will have the following format: "![name],[number of dice],[number of sides],[number of sides versatile],[damage type]" repeating for multiple damage types, each preset is sperated by exclamation marks
-     presetCodeArray += wholePresetCode;
      var presetArray = wholePresetCode.split("!");
      //clears the preset box
      while (document.getElementById("presetMenu").options.length > 0) {
@@ -30,7 +26,14 @@ function preSet() {
      }
      //removes the first element from the list, which is not part of the presets
      document.getElementById("presetMenu").remove(0);
-     localStorage.setItem('presetArrayStored', presetCodeArray);
+}
+
+function preSetPrimer() {
+    wholePresetCode = document.getElementById("setPreset").value;
+    presetCodeArray += wholePresetCode;
+    localStorage.setItem('presetArrayStored', "");
+    localStorage.setItem('presetArrayStored', presetCodeArray);
+    preSet();
 }
 //presets handled here. sperate handling of different damage types to come later
 function rollSet() {
