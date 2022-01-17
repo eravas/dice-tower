@@ -6,15 +6,7 @@ var n = 1;
 var m = 0;
 //storing preset code
 var wholePresetCode = "";
-//array containing all of the preset code
 var presetCodeArray = [];
-if (localStorage.getItem('presetArray')) {
-    presetCodeArray = JSON.parse(localStorage.getItem('presetArray'));
-}
-for (let i = 0; i < presetCodeArray.length; i++) {
-    wholePresetCode = presetCodeArray[i];
-    preSet();
-}
 //setting preset dropdown menu
 function preSet() {
      //preset code will have the following format: "![name],[number of dice],[number of sides],[number of sides versatile],[damage type]" repeating for multiple damage types, each preset is sperated by exclamation marks
@@ -242,4 +234,11 @@ function randMess() {
 //this sets the initial value of the random message
 function initQuote() {
      document.getElementById("rngQuote").value="Take a chance, roll the dice";
+     if (localStorage.getItem('presetArray')) {
+         presetCodeArray = JSON.parse(localStorage.getItem('presetArray'));
+     }
+     for (let i = 0; i < presetCodeArray.length; i++) {
+         wholePresetCode = presetCodeArray[i];
+         preSet();
+     }
 }
