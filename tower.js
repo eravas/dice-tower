@@ -31,7 +31,6 @@ function preSet() {
 function preSetPrimer() {
     wholePresetCode = document.getElementById("setPreset").value;
     presetCodeArray += wholePresetCode;
-    localStorage.setItem('presetArrayStored', "");
     localStorage.setItem('presetArrayStored', presetCodeArray);
     preSet();
 }
