@@ -7,11 +7,13 @@ var m = 0;
 //storing preset code
 var wholePresetCode = "";
 var presetCodeArray = [];
+function preSetPrimer() {
+    wholePresetCode = document.getElementById("setPreset").value;
+    preSet();
+}
 //setting preset dropdown menu
 function preSet() {
      //preset code will have the following format: "![name],[number of dice],[number of sides],[number of sides versatile],[damage type]" repeating for multiple damage types, each preset is sperated by exclamation marks
-     //this line grabs the whole preset code and stores it in a string before splitting it into seperate presets into an array
-     wholePresetCode = document.getElementById("setPreset").value;
      presetCodeArray += wholePresetCode;
      var presetArray = wholePresetCode.split("!");
      //clears the preset box
@@ -240,6 +242,7 @@ function initQuote() {
      }
      for (let i = 0; i < presetCodeArray.length; i++) {
          wholePresetCode = presetCodeArray[i];
+         console.log(wholePresetCode);
          preSet();
      }
 }

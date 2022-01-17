@@ -19,7 +19,7 @@
                <br>
                <label for="setPreset">Custom Preset Code: </label>
                <input name="setPreset" id="setPreset">
-               <button type="button" onClick="preSet()">Submit</button>
+               <button type="button" onClick="preSetPrimer()">Submit</button>
                <br>
                <button type="button" onClick="rollSet()">Roll</button>
                <select name="presetMenu" id="presetMenu">
@@ -28,7 +28,7 @@
                <input type="checkbox" id="versBox" name="versBox" value="1">
                <br>
                <p>
-                    Format: 
+                    Format:
                     <br>
                     ![name],[number of dice],[dice type],[dice type versatile],[damage type] (For example:"!longsword,1,8,10,sharp!greatsword,2,6,6,sharp")
                </p>
